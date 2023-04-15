@@ -45,7 +45,7 @@ const create = () => {
           width="120"
           height="120"
           alt="ticket-img"
-          className="rounded-lg my-1"
+          className="rounded-lg my-1 mb-2"
         />
         <input type="file" />
         <button className="bg-[#7843E8] rounded-3xl text-white p-3 my-7 hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] duration-200 font-monument_reg border border-black  w-[30%] ">

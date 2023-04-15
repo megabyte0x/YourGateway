@@ -14,7 +14,7 @@ const Menu = () => {
       {data.map((item) => {
         return (
           <React.Fragment key={item.id}>
-            <li className="cursor-pointer">
+            <li className="cursor-pointer hover:scale-95 duration-300">
               <Link href={item?.url}>{item.name}</Link>
             </li>
           </React.Fragment>
