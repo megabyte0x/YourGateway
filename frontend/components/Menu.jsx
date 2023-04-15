@@ -4,7 +4,7 @@ import Link from "next/link";
 const data = [
   { id: 1, name: "Home", url: "/" },
   { id: 2, name: "Projects", url: "/about" },
-  { id: 3, name: "About", url: "/contact" },
+  { id: 3, name: "Create", url: "/create" },
   //   { id: 4, name: "About", url: "/contact" },
 ];
 
