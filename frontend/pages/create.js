@@ -3,7 +3,7 @@ import Image from "next/image";
 const create = () => {
   return (
     <div className="w-full max-w-[1280px] px-5 md:px-10 mx-auto min-h-[500px]">
-      <form className="bg-[#FFF253] rounded-lg border-2 border-[#7843E8] border-dashed my-5 md:my-10 px-5 w-[80%] mx-auto text-black flex flex-col py-5 font-monument_reg ">
+      <form className="bg-[#FFF253] rounded-lg border-2 border-[#fff]  my-5 md:my-10 px-5 w-[80%] mx-auto text-black flex flex-col py-5 font-monument_reg shadow-[10px_10px_0px_#7843E8] ">
         <h2 className="text-2xl my-2 text-[#7843E8] font-otf ">Create Event</h2>
         <label className="text-sm font-thin my-2">Name</label>
         <input
@@ -48,7 +48,7 @@ const create = () => {
           className="rounded-lg my-1 mb-2"
         />
         <input type="file" />
-        <button className="bg-[#7843E8] rounded-3xl text-white p-3 my-7 hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] duration-200 font-monument_reg border border-black  w-[30%] ">
+        <button className="bg-[#7843E8] rounded-3xl text-white p-3 my-7 hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] hover:shadow-[2px_2px_0px_#000000] duration-200 font-monument_reg border border-black  w-[30%] ">
           Create
         </button>
       </form>

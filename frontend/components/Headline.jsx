@@ -38,7 +38,7 @@ const Headline = ({ text }) => {
         <div
           className={`flex hover:-translate-x-[5rem] duration-700 ${show} whitespace-nowrap`}
         >
-          {Array(10)
+          {Array(20)
             .fill(0)
             .map((_, i) => (
               <div key={i} className="m-2 mx-5 w-fit whitespace-nowrap">

@@ -13,7 +13,9 @@
   font-family: "OTF";
   src: url("../public/fonts/OTF®\ Glusp.ttf");
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -32,6 +34,7 @@
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

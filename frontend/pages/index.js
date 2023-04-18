@@ -11,11 +11,11 @@ export default function Home() {
         <HeroText />
         <HeroImg />
       </div>
-      <Headline text="Trending Products" />
+      <Headline text="Must Attend" />
       <TopProducts />
-      <Headline text="Our MarketPlace" />
+      <Headline text="Event MarketPlace" />
       <MarketPlace />
-      <Headline text="Top Products" />
+      <Headline text="Top Events" />
     </main>
   );
 }

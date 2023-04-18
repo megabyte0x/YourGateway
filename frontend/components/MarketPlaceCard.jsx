@@ -21,7 +21,7 @@ const MarketPlaceCard = () => {
             </h2>
             <h2 className="font-monument_bold text-[#7843E8] text-xl">7 ETH</h2>
           </section>
-          <button className="bg-[#7843E8] rounded-3xl text-white px-3 my-1 hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] duration-200 font-monument_reg border border-black ">
+          <button className="bg-[#7843E8] rounded-3xl text-white px-3 my-1 hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] hover:shadow-[2px_2px_0px_#000000] duration-200 font-monument_reg border border-black ">
             Buy Now
           </button>
         </section>
@@ -37,7 +37,7 @@ const MarketPlaceCard = () => {
         </h2>
         <Link
           href="/tickets/event-1"
-          className="bg-[#FFF89F] rounded-3xl text-black py-2 my-1 px-3  hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] duration-200 font-monument_reg border border-black text-center"
+          className="bg-[#FFF89F] rounded-3xl text-black py-2 my-1 px-3  hover:scale-95 text-xs gap-10 shadow-[5px_5px_0px_#000000] hover:shadow-[2px_2px_0px_#000000] duration-200 font-monument_reg border border-black text-center"
         >
           Explore
         </Link>
