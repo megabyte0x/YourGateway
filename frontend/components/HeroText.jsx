@@ -2,14 +2,14 @@ import React from "react";
 
 const HeroText = () => {
   return (
-    <div className="relative w-[50%] basis-[50%] justify-center text-center px-5  md:border-r font-otf  flex flex-col ">
-      <h1 className="text-7xl">Virtual</h1>
-      <h1 className="text-7xl ">World</h1>
-      <h2 className="text-[#A3A3A3] my-5 text-sm">
+    <div className="relative md:w-[50%] max-md:w-full max-md:h-full md:basis-[50%] justify-center text-center px-5  md:border-r font-otf  flex flex-col max-md:justify-center">
+      <h1 className="md:text-7xl max-md:text-6xl">Virtual</h1>
+      <h1 className="md:text-7xl max-md:text-6xl ">World</h1>
+      <h2 className="text-[#A3A3A3] my-5 md:text-sm max-md:text-xs">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non
         quis it optio amet abs voluptates voluptas
       </h2>
-      <span className="absolute bottom-5 -right-10 rounded-full text-white bg-[#454545] h-20 w-20 flex justify-center content-center">
+      <span className="max-md:hidden absolute bottom-5 -right-10 rounded-full text-white bg-[#454545] h-20 w-20 flex justify-center content-center">
         <svg
           width="70"
           height="70"

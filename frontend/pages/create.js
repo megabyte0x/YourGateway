@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 const create = () => {
   return (
-    <div className="w-full max-w-[1280px] px-5 md:px-10 mx-auto min-h-[500px]">
-      <form className="bg-[#FFF253] rounded-lg border-2 border-[#fff]  my-5 md:my-10 px-5 w-[80%] mx-auto text-black flex flex-col py-5 font-monument_reg shadow-[10px_10px_0px_#7843E8] ">
+    <div className="w-full max-w-[1280px] px-5 md:px-10 mx-auto min-h-[80vh]">
+      <form className="bg-[#FFF253] rounded-lg border-2 border-[#fff]  my-5 md:my-10 px-5 w-[77%] lg:w-[70%] mx-auto text-black flex flex-col py-5 font-monument_reg shadow-[10px_10px_0px_#7843E8] ">
         <h2 className="text-2xl my-2 text-[#7843E8] font-otf ">Create Event</h2>
         <label className="text-sm font-thin my-2">Name</label>
         <input
