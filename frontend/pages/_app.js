@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import React from "react";
+import "@biconomy/web3-auth/dist/src/style.css";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { mainnet, polygon, polygonMumbai } from "wagmi/chains";
@@ -41,7 +42,7 @@ export default function App({ Component, pageProps }) {
         </div>
       ) : (
         <WagmiConfig client={wagmiClient}>
-          <Header />
+          {/* <Header /> */}
           <Component {...pageProps} />
           <Footer />
         </WagmiConfig>
