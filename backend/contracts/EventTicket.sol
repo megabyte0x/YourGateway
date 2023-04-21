@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity 0.8.18;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
@@ -18,6 +18,9 @@ contract EventTicket is ERC1155 {
 
     /// @dev Mapping to store ticket type details using ticketTypeId as key
     mapping(uint256 => TicketType) public ticketTypes;
+
+    /// @dev Mapping to store ticket holders for each event using ticketTypeId as key
+    mapping(uint256 => address[]) public ticketHolders;
 
     /// @dev Events to be emitted on specific contract actions
     event TicketTypeCreated(
@@ -42,7 +45,7 @@ contract EventTicket is ERC1155 {
     /// @param metadataURI The URI for the new ticket type's metadata
     /// @param price The price of the new ticket type (in wei)
     /// @param supply The total supply of the new ticket type
-    function createTicketType(
+    function createTicket(
         string memory metadataURI,
         uint256 price,
         uint256 supply
@@ -90,18 +93,20 @@ contract EventTicket is ERC1155 {
         address ticketCreator = ticketType.creator;
         payable(ticketCreator).transfer(msg.value);
 
+        ticketHolders[ticketTypeId].push(to);
+
         safeTransferFrom(ticketCreator, to, ticketTypeId, amount, "");
         emit TicketPurchased(msg.sender, to, ticketTypeId, amount);
     }
 
-    /// @notice Returns the metadata URI of a specific ticket type
+    /// @notice Get the list of ticket holders for a specific event
     /// @param ticketTypeId The ID of the ticket type
-    /// @return The metadata URI of the ticket type
-    function uri(
+    /// @return An array of addresses holding tickets for the event
+    function getTicketHolders(
         uint256 ticketTypeId
-    ) public view override returns (string memory) {
+    ) external view returns (address[] memory) {
         require(ticketTypes[ticketTypeId].supply > 0, "Ticket type not found");
-        return ticketTypes[ticketTypeId].metadataURI;
+        return ticketHolders[ticketTypeId];
     }
 
     /// @notice Get the details of a specific ticket type
@@ -118,5 +123,17 @@ contract EventTicket is ERC1155 {
             ticketType.price,
             ticketType.supply
         );
+    }
+
+    //==== Override Functions====//
+
+    /// @notice Returns the metadata URI of a specific ticket type
+    /// @param ticketTypeId The ID of the ticket type
+    /// @return The metadata URI of the ticket type
+    function uri(
+        uint256 ticketTypeId
+    ) public view override returns (string memory) {
+        require(ticketTypes[ticketTypeId].supply > 0, "Ticket type not found");
+        return ticketTypes[ticketTypeId].metadataURI;
     }
 }
