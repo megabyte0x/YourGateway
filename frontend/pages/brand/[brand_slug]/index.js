@@ -1,7 +1,7 @@
 import React from "react";
 
-const Evenst = () => {
-  return <div>Evenst</div>;
+const Brand = () => {
+  return <div>Brand</div>;
 };
 
-export default Evenst;
+export default Brand;
