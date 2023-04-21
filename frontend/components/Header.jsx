@@ -9,9 +9,9 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full h-[50px] md:h-[70px] flex items-center justify-between font-inter border-b-1`}
+      className={`w-full h-[50px] md:h-[60px] flex items-center justify-between font-inter border-b-1`}
     >
-      <Wrapper className="h-[50px] flex justify-between items-center">
+      <Wrapper className="h-[40px] flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <h2 className="font-monalt text-2xl font-bold">Funtix</h2>

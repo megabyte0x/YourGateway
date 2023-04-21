@@ -2,6 +2,11 @@ import React from "react";
 import Wrapper from "../Wrapper";
 
 const CreateEvent = () => {
+  /**
+   * TODO:
+   * 1. Fix all ids
+   * 2. Add on change event to all inputs
+   */
   return (
     <div className="w-full">
       <Wrapper className="bg-white rounded-xl py-5">
