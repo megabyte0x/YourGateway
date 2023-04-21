@@ -8,9 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        monument_reg: "Monuments Ext, sans-serif",
-        monument_bold: "Monuments Ext Bold, sans-serif",
-        otf: "OTF, sans-serif",
+        inter: ["Inter", "sans-serif"],
+        monalt: ["Montserrat Alternates", "sans-serif"],
       },
     },
   },
