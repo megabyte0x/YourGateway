@@ -10,6 +10,7 @@ export default function Home() {
       </Head>
       <div className="w-full my-5">
         <Wrapper className="flex justify-around font-inter py-10">
+          {/* Hero Text */}
           <div className="basis-[40%] my-auto">
             <h1 className="text-4xl font-semibold my-2">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
@@ -19,9 +20,13 @@ export default function Home() {
               Get Early Access
             </button>
           </div>
+          {/* Hero Text End */}
+
+          {/* Hero Image */}
           <div className="basis-[40%]">
             <img src="/demo-hero.jpg" alt="hero" className="rounded-lg" />
           </div>
+          {/* Hero Image End */}
         </Wrapper>
       </div>
     </main>
