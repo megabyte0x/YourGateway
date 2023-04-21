@@ -17,6 +17,28 @@ const CreateEvent = () => {
             className="border border-[#CFCFCF] my-2 mb-7 p-3 rounded-lg w-full outline-none text-base"
             placeholder="Event Name"
           />
+          <label>
+            <h3 className="text-sm font-semibold my-1">Event Type</h3>
+          </label>
+
+          <div className="flex my-3 mb-7">
+            <button className="border bg-black border-[#CFCFCF] text-white p-3 rounded-lg w-[20%]  outline-none text-base">
+              Online
+            </button>
+            <button className="border border-[#CFCFCF] text-[#6C757D] p-3 rounded-lg w-[20%] mx-5 outline-none text-base">
+              Offline
+            </button>
+          </div>
+          <label>
+            <h3 className="text-sm font-semibold my-1">Event Location</h3>
+          </label>
+          <input
+            type="text"
+            name="event_name"
+            className="border border-[#CFCFCF] my-2 mb-7 p-3 rounded-lg w-full outline-none text-base"
+            placeholder="ABC Street, 123"
+          />
+
           <label for="inputCollectableImage">
             <h3 className="text-sm font-semibold my-1">Collectable Image</h3>
             <img
