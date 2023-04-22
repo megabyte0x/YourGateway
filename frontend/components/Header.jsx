@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full h-[50px] md:h-[60px] flex items-center justify-between font-inter border-b-1`}
+      className={`w-full h-[50px] md:h-[70px] flex items-center justify-between font-inter border-b-1`}
     >
       <Wrapper className="h-[40px] flex justify-between items-center">
         {/* Logo */}
