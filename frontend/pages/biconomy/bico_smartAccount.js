@@ -1,26 +1,37 @@
-import { ChainId } from "@biconomy/core-types";
+import { ChainId } from '@biconomy/core-types';
+import SmartAccount from '@biconomy/smart-account';
+import { useSigner } from 'wagmi';
 
-import SmartAccount from "@biconomy/smart-account";
+import { getProvider } from './bico_socialLogin';
 
-//TODO: Import the provider from the social login.
+// Get the Smart Account instance
+async function getSmartAccount() {
+    const { data: signer } = useSigner();
+    const provider = signer.provider;
+    // const provider = await getProvider();
 
-export let activeChainId = ChainId.POLYGON_MUMBAI;
-export const supportedChains = [
-    ChainId.POLYGON_MUMBAI,
-];
+    const activeChainId = ChainId.POLYGON_MUMBAI;
+    const supportedChains = [
+        ChainId.POLYGON_MUMBAI,
+    ];
 
-let options = {
-    activeNetworkId: activeChainId,
-    supportedNetworksIds: supportedChains,
-    networkConfig: [
-        {
-            chainId: ChainId.GOERLI,
-            dappAPIKey: '<DAPP_API_KEY>',
-        }
-    ]
+
+
+    let options = {
+        activeNetworkId: activeChainId,
+        supportedNetworksIds: supportedChains,
+        networkConfig: [
+            {
+                chainId: ChainId.POLYGON_MUMBAI,
+                dappAPIKey: '<DAPP_API_KEY>',
+            }
+        ]
+    }
+
+    let smartAccount = new SmartAccount(provider, options);
+    smartAccount = await smartAccount.init();
+
+    return smartAccount;
 }
 
-let smartAccount = new SmartAccount(provider, options);
-smartAccount = await smartAccount.init();
-
-export default smartAccount;
+export const smartAccount = getSmartAccount();

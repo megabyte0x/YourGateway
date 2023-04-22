@@ -4,7 +4,7 @@ pragma solidity 0.8.18;
 import "./NFTDrop.sol";
 
 /**
- * @title NFTDrop
+ * @title NFTDropFactory
  * @dev This is a facotry contract for creating NFTDrop contracts.
  */
 contract NFTDropFactory {
