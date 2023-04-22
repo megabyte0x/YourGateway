@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@biconomy/web3-auth": "^2.0.0",
     "@chakra-ui/react": "^2.5.5",
     "@chakra-ui/spinner": "^2.0.12",
     "@emotion/react": "^11.10.6",
